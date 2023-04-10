@@ -7,7 +7,7 @@ import gdown
 @st.experimental_singleton
 def get_models():
     if not os.path.exists('models'):
-        gdown.download_folder('https://drive.google.com/drive/folders/1vDuO3_3zlViFSbndcjHhIgjf2z4QNbV1?usp=sharing', quiet=True)
+        gdown.download_folder('https://drive.google.com/drive/folders/1yHR18keo5RTOxEzfA_sRaL1nfCauUzHj?usp=sharing', quiet=True)
     models={}
     for i in os.listdir('models'):
         models[i.split('.')[0]]=tf.keras.models.load_model(f'models/{i}', compile=False)
